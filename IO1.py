@@ -9,9 +9,16 @@ ftest.seek(0,0); #Reposition the counter
 str = ftest.read(04);
 print "read string is : ",str
 
-os.rename("sample.txt","practice.txt")
-print "The name of the file :", ftest.name
+ftest1 = open("practice.txt", "w+")  #create new file
+print "Name of the file : ", ftest1.name
+
+os.remove("practice.txt")  #delete new created file
+
+
+os.mkdir("test")
+print os.getcwd()
+
+os.rmdir("test")
 
 ftest.close()
-
 
