@@ -1,0 +1,24 @@
+import os
+
+ftest = open("sample.txt", "r+")
+
+print "The name of the File : ", ftest.name
+ftest.write("python is a great language")
+
+ftest.seek(0,0); #Reposition the counter
+str = ftest.read(04);
+print "read string is : ",str
+
+ftest1 = open("practice.txt", "w+")  #create new file
+print "Name of the file : ", ftest1.name
+
+os.remove("practice.txt")  #delete new created file
+
+
+os.mkdir("test")
+print os.getcwd()
+
+os.rmdir("test")
+
+ftest.close()
+
